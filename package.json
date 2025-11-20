@@ -1,0 +1,15 @@
+{
+    "type": "module",
+    "scripts": {
+        "start": "npm run create-database && npm run start-query",
+        "create-database": "codeql database create db-js --language=javascript --source-root=./src --overwrite",
+        "start-query": "codeql query run codeql-custom-queries-javascript/singleton.ql --database=db-js --output=singleton.bqrs && npm run encode",
+        "encode": "codeql bqrs decode singleton.bqrs --format=json --output=singleton.json"
+    },
+    "dependencies": {
+        "@langchain/core": "^1.0.6",
+        "@langchain/openai": "^1.1.2",
+        "express": "^5.1.0",
+        "ollama-api-facade-js": "^1.0.7"
+    }
+}
