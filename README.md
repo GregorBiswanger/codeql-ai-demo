@@ -14,7 +14,7 @@ This project demonstrates how to combine CodeQL analyses with AI-powered assista
 
 1. Clone the repository:
      ```sh
-     git clone <repo-url>
+     git clone https://github.com/GregorBiswanger/codeql-ai-demo.git
      cd codeql-ai-demo
      ```
 2. Install dependencies:
